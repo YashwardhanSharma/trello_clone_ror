@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 1234
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: trello_clone_development
+
+test:
+  <<: *default
+  database: trello_clone_test
